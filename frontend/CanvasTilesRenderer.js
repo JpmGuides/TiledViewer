@@ -332,6 +332,7 @@ CanvasTilesRenderer.prototype.refreshIfNotMoving = function() {
 CanvasTilesRenderer.prototype.loadImage = function(url, success, failure) {
   var image = new Image();
   image.src = url;
+  image.crossOrigin = "Anonymous";
   image.onload = function() {
     success(image);
   };
